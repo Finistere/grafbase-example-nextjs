@@ -8,6 +8,6 @@ type Todo @model {
   id: ID!
   title: String!
   complete: Boolean!
-  doneAt: Boolean!
+  doneAt: String!
   list: TodoList
 }
