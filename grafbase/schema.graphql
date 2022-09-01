@@ -8,5 +8,6 @@ type Todo @model {
   id: ID!
   title: String!
   complete: Boolean!
+  done_at: DateTime
   list: TodoList
 }
