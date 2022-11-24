@@ -1,13 +1,11 @@
 type TodoList @model {
   id: ID!
-  title: String!
+  title: String
   todos: [Todo]
 }
 
 type Todo @model {
   id: ID!
-  title: String!
-  complete: Boolean!
-  doneAt: DateTime!
+  title: String
   list: TodoList
 }
