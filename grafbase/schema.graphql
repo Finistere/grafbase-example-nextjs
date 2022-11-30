@@ -2,6 +2,7 @@ type User @model {
   id: ID!
   email: String!
   name: String!
+  name: String!
   posts: [Post]
 }
 
