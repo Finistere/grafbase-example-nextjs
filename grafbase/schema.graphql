@@ -2,7 +2,8 @@ type User @model {
   id: ID!
   email: String!
   name: String!
-  name: String!
+  test: String
+  test: Int
   posts: [Post]
 }
 
