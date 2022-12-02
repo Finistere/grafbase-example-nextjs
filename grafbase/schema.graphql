@@ -9,7 +9,7 @@ type User @model {
 
 type Post @model {
   id: ID!
-  title: String!
+  title: String! @length(max: 10)
   content: String!
   user: User!
   comments: [Comment]
