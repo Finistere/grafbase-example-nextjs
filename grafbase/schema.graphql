@@ -1,35 +1,69 @@
-type User @model {
+type Address @model {
   id: ID!
-  email: String!
-  name: String!
-  test: String
-  test: Int
-  posts: [Post]
+  customer: Customer!
+  company: String
+  firstName: String!
+  lastName: String!
+  street1: String!
+  street2: String
+  city: String!
+  country: String!
+  zip: String!
 }
 
-type Post @model {
+type Cart @model {
   id: ID!
-  title: String! @length(max: 10)
-  content: String!
-  user: User!
-  comments: [Comment]
+  customer: Customer
+  order: Order
+  lineItems: [LineItem]
+  shippingTotal: Float!
+  discountTotal: Float!
+  total: Float!
+  currency: String!
 }
 
-type Comment @model {
+type Customer @model {
   id: ID!
-  content: String!
-  user: User!
-  post: Post!
+  firstName: String!
+  lastName: String!
+  email: Email! @unique
+  phoneNumber: String
+  billingAddress: Address
 }
 
-type TodoList @model {
+type Order @model {
   id: ID!
-  title: String
-  todos: [Todo]
+  cart: Cart
+  lineItems: [LineItem]
+  shippingTotal: Float!
+  discountTotal: Float!
+  total: Float!
+  currency: String!
 }
 
-type Todo @model {
+type LineItem @model {
   id: ID!
-  title: String
-  list: TodoList
+  order: Order!
+  variant: Variant!
+  quantity: Int!
+}
+
+type Product @model {
+  id: ID!
+  title: String!
+  imageUrl: URL!
+  description: String!
+  stock: Int!
+  slug: String! @unique
+  variants: [Variant]
+  brand: String
+}
+
+type Variant @model {
+  id: ID!
+  title: String!
+  product: Product!
+  sku: String!
+  price: Float!
+  currency: String!
 }
