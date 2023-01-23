@@ -14,6 +14,7 @@ type Resident @model {
   email: String! @unique
   phone: String
   dob: String
+  bills: [Bill]
 }
 
 type Bill @model {
