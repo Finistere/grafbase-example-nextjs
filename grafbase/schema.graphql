@@ -1,69 +1,31 @@
-type Address @model {
-  id: ID!
-  customer: Customer!
-  company: String
-  firstName: String!
-  lastName: String!
-  street1: String!
-  street2: String
-  city: String!
-  country: String!
-  zip: String!
+enum BillType {
+  Electricity
+  Gas
+  Water
+  Wifi
+  Grocery
+  Others
 }
 
-type Cart @model {
-  id: ID!
-  customer: Customer
-  order: Order
-  lineItems: [LineItem]
-  shippingTotal: Float!
-  discountTotal: Float!
-  total: Float!
-  currency: String!
-}
-
-type Customer @model {
+type Resident @model {
   id: ID!
   firstName: String!
   lastName: String!
-  email: Email! @unique
-  phoneNumber: String
-  billingAddress: Address
+  email: String! @unique
+  phone: String
+  dob: String
 }
 
-type Order @model {
+type Bill @model {
   id: ID!
-  cart: Cart
-  lineItems: [LineItem]
-  shippingTotal: Float!
-  discountTotal: Float!
-  total: Float!
-  currency: String!
-}
-
-type LineItem @model {
-  id: ID!
-  order: Order!
-  variant: Variant!
-  quantity: Int!
-}
-
-type Product @model {
-  id: ID!
+  type: BillType!
   title: String!
-  imageUrl: URL!
-  description: String!
-  stock: Int!
-  slug: String! @unique
-  variants: [Variant]
-  brand: String
-}
+  amount: Float!
+  date: String!
+  residents: [Resident!]!
+  paid: Boolean!
+  paidDate: String
 
-type Variant @model {
-  id: ID!
-  title: String!
-  product: Product!
-  sku: String!
-  price: Float!
-  currency: String!
+  description: String
+
 }
