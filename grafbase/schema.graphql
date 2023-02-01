@@ -14,7 +14,7 @@ type Resident @model {
   email: String! @unique
   phone: String
   dob: String
-  bills: [Bill]
+  bills: [Bill!]
 }
 
 type Bill @model {
@@ -26,7 +26,5 @@ type Bill @model {
   residents: [Resident!]!
   paid: Boolean!
   paidDate: String
-
   description: String
-
 }
