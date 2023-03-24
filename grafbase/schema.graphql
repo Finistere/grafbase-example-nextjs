@@ -1,30 +1,10 @@
-enum BillType {
-  Electricity
-  Gas
-  Water
-  Wifi
-  Grocery
-  Others
-}
-
-type Resident @model {
-  id: ID!
-  firstName: String!
-  lastName: String!
-  email: String! @unique
-  phone: String
-  dob: String
-  bills: [Bill!]
-}
-
-type Bill @model {
-  id: ID!
-  type: BillType!
+type TodoList @model {
   title: String!
-  amount: Float!
-  date: String!
-  residents: [Resident!]!
-  paid: Boolean!
-  paidDate: String
-  description: String
+  todos: [Todo]
+}
+
+type Todo @model {
+  list: TodoList
+  title: String!
+  complete: Boolean
 }
