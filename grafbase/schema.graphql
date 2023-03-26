@@ -8,3 +8,47 @@ type Todo @model @search {
   title: String!
   complete: Boolean
 }
+
+type Fields @model @search {
+  ip: IPAddress
+  timestamp: Timestamp
+  url: URL
+  email: Email
+  phone: PhoneNumber
+  date: Date
+  datetime: DateTime
+  text: String
+  int: Int
+  float: Float
+  bool: Boolean
+  # Shouldn't raise any error
+  json: JSON
+}
+
+type RequiredFields @model {
+  ip: IPAddress! @search
+  timestamp: Timestamp! @search
+  url: URL! @search
+  email: Email! @search
+  phone: PhoneNumber! @search
+  date: Date! @search
+  datetime: DateTime! @search
+  text: String! @search
+  int: Int! @search
+  float: Float! @search
+  bool: Boolean! @search
+}
+
+type ListFields @model {
+  ip: [IPAddress!] @search
+  timestamp: [Timestamp!] @search
+  url: [URL!] @search
+  email: [Email!] @search
+  phone: [PhoneNumber!] @search
+  date: [Date!] @search
+  datetime: [DateTime!] @search
+  text: [String!] @search
+  int: [Int!] @search
+  float: [Float!] @search
+  bool: [Boolean!] @search
+}
