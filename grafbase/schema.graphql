@@ -3,7 +3,7 @@ type TodoList @model {
   todos: [Todo]
 }
 
-type Todo @model @search {
+type Todo @model @cache(maxAge: 60) {
   list: TodoList
   title: String!
   complete: Boolean
