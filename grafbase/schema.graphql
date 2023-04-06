@@ -1,5 +1,6 @@
 type TodoList @model {
   title: String!
+  complete: Boolean
   todos: [Todo]
 }
 
