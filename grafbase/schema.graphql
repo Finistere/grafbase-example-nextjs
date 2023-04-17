@@ -2,3 +2,7 @@ type Dummy @model {
   title: String
 }
 
+type Post @model {
+  title: String
+}
+
