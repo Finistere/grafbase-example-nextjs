@@ -1,8 +1,10 @@
-type Dummy @model {
-  title: String
+type TodoList @model {
+  title: String!
+  todos: [Todo]
 }
 
-type Post @model {
-  title: String
+type Todo @model @search {
+  list: TodoList
+  title: String!
+  complete: Boolean
 }
-
