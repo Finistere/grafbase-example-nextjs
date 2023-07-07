@@ -1,10 +1,9 @@
-type TodoList @model {
-  title: String!
-  todos: [Todo]
+enum MediaItemSizeEnum {
+  MEDIUM
+  MEDIUM_LARGE
+  THUMBNAIL
 }
 
 type Todo @model @search {
-  list: TodoList
-  title: String!
-  complete: Boolean
+  title: String
 }
