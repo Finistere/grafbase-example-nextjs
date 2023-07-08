@@ -6,4 +6,5 @@ enum MediaItemSizeEnum {
 
 type Todo @model @search {
   title: String
+  complete: Boolean
 }
