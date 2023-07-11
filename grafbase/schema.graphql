@@ -7,3 +7,7 @@ enum MediaItemSizeEnum {
 type Todo @model @search {
   title: String
 }
+
+type Post @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) { title: String! url: URL slug: String content: String publishedAt: DateTime comments: [Comment] likes: Int @default(value: 0) tags: [String] @length(max: 5) author: PostUser }
+
+type Comment @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) { post: Post! body: String! likes: Int @default(value: 0) author: PostUser }
