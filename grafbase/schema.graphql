@@ -1,9 +1,3 @@
-enum MediaItemSizeEnum {
-  MEDIUM
-  MEDIUM_LARGE
-  THUMBNAIL
-}
-
 type Todo @model @search {
   title: String
 }
