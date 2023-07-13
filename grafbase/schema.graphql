@@ -1,5 +1,6 @@
 type Todo @model @search {
   title: String
+  complete: Boolean
 }
 
 type Post @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) {
