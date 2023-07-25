@@ -1,6 +1,12 @@
 type Todo @model @search {
   title: String
   complete: Boolean
+  status: Status
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
 }
 
 type Post @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) {
