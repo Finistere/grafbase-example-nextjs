@@ -1,3 +1,7 @@
+type Query {
+  hello(name: String): String! @resolver(name: "hello")
+}
+
 type Todo @model @search {
   title: String
   complete: Boolean
