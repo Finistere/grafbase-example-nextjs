@@ -1,3 +1,3 @@
-export default function Resolver(root, args, context) {
-  fetch("https://abzorbapi.click2sign.co.uk:8075/api/Connections?CLI=07749432615")
+export default async function Resolver(root, args, context) {
+  return await fetch("https://www.google.fr", { cf: { cacheTtl: 0 } }).then(res => res.text())
 }

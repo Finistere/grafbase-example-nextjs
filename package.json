@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "grafbase": "^0.22.0"
+    "grafbase": "^0.28.2"
   }
 }

@@ -2,17 +2,18 @@
 # yarn lockfile v1
 
 
-"@grafbase/cli-aarch64-apple-darwin@^0.22.0":
-  version "0.22.0"
-  resolved "https://registry.npmjs.org/@grafbase/cli-aarch64-apple-darwin/-/cli-aarch64-apple-darwin-0.22.0.tgz"
-  integrity sha512-IPCDqYUSQXY36NPQHoNswKiULMUQPaE+4UawJ09rFUeXR+1OWIWnDopjqGKiBvb22IhY7NeC1wgFrXJt/8P/4A==
+"@grafbase/cli-aarch64-apple-darwin@^0.28.2":
+  version "0.28.2"
+  resolved "https://registry.npmjs.org/@grafbase/cli-aarch64-apple-darwin/-/cli-aarch64-apple-darwin-0.28.2.tgz"
+  integrity sha512-dcSNDTYTCLTlTc5W9bvOCURiIrbwGoPNmQc6ES3+YIrrercduDn7j0XSpaXfjpVu9tj32UXWDvAmO5JDGBX5+w==
 
-grafbase@^0.22.0:
-  version "0.22.0"
-  resolved "https://registry.npmjs.org/grafbase/-/grafbase-0.22.0.tgz"
-  integrity sha512-1UuezkcEgXb2gymIYId1GDOyp7SuMjdEZ3Bd5Lq29iP1ejprMhZKFJkU/gDgSnpDe0KAsB/4T0fcy3I52XfkQQ==
+grafbase@^0.28.2:
+  version "0.28.2"
+  resolved "https://registry.npmjs.org/grafbase/-/grafbase-0.28.2.tgz"
+  integrity sha512-jhJL4mzXUitBJHBnaK3SPgqJ9jp2hoEnG48ZQH6dChj/yRRza+9NCOi3Yqekgi8fb7R9ehazeApv3aDK/BObOQ==
   optionalDependencies:
-    "@grafbase/cli-aarch64-apple-darwin" "^0.22.0"
-    "@grafbase/cli-x86_64-apple-darwin" "^0.22.0"
-    "@grafbase/cli-x86_64-pc-windows-msvc" "^0.22.0"
-    "@grafbase/cli-x86_64-unknown-linux-musl" "^0.22.0"
+    "@grafbase/cli-aarch64-apple-darwin" "^0.28.2"
+    "@grafbase/cli-aarch64-unknown-linux-musl" "^0.28.2"
+    "@grafbase/cli-x86_64-apple-darwin" "^0.28.2"
+    "@grafbase/cli-x86_64-pc-windows-msvc" "^0.28.2"
+    "@grafbase/cli-x86_64-unknown-linux-musl" "^0.28.2"
