@@ -19,13 +19,7 @@ type Post @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) {
   slug: String
   content: String
   publishedAt: DateTime
-  comments: [Comment]
   likes: Int @default(value: 0)
   tags: [String] @length(max: 5)
 }
 
-type Comment @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) {
-  post: Post!
-  body: String!
-  likes: Int @default(value: 0)
-}
