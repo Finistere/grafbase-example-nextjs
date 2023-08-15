@@ -1,25 +1,17 @@
-type Query {
-  hello(name: String): String! @resolver(name: "hello")
+type Record @model @search {
+  eventTime: DateTime!
+  eventType: EventType!
+  productId: Int!
+  categoryId: Int!
+  categoryCode: String!
+  brand: String!
+  price: Float!
+  userId: Int!
 }
 
-type Todo @model @search {
-  title: String
-  complete: Boolean
-  status: Status
+enum EventType {
+  VIEW
+  CART
+  REMOVE_FROM_CART
+  PURCHASE
 }
-
-enum Status {
-  ACTIVE
-  INACTIVE
-}
-
-type Post @model @search @cache(maxAge: 60, staleWhileRevalidate: 120) {
-  title: String!
-  url: URL
-  slug: String
-  content: String
-  publishedAt: DateTime
-  likes: Int @default(value: 0)
-  tags: [String] @length(max: 5)
-}
-
