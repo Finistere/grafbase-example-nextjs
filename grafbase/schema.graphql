@@ -1,17 +1,9 @@
-type Record @model @search {
-  eventTime: DateTime!
-  eventType: EventType!
-  productId: Int!
-  categoryId: Int!
-  categoryCode: String!
-  brand: String!
-  price: Float!
-  userId: Int!
+type Player @model @search {
+  name: String! @unique
+  notes: [Note]
 }
 
-enum EventType {
-  VIEW
-  CART
-  REMOVE_FROM_CART
-  PURCHASE
+type Note @model @search {
+  note: String!
+  player: Player!
 }
