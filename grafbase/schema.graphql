@@ -2,7 +2,6 @@ type Player @model @search {
   name: String! @unique
   notes: [Note]
 }
-
 type Note @model @search {
   note: String!
   player: Player!
