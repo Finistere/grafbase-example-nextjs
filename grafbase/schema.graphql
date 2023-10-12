@@ -1,3 +1,8 @@
+extend schema @postgres(
+    name: "brabier",
+    url: "postgres://Finistere:MU56mJYxtLgd@ep-dawn-silence-41991082.eu-central-1.aws.neon.tech/neondb"
+  )
+
 type Player @model @search {
   name: String! @unique
   notes: [Note]
@@ -6,3 +11,8 @@ type Note @model @search {
   note: String!
   player: Player!
 }
+
+# extend type Query {
+#   hello(name: String): String! @resolver(name: "hello")
+# }
+
