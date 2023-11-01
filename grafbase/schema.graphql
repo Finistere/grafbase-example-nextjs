@@ -1,6 +1,6 @@
 extend schema @postgres(
     name: "brabier",
-    url: "postgres://Finistere:MU56mJYxtLgd@ep-dawn-silence-41991082.eu-central-1.aws.neon.tech/neondb"
+    url: "postgres://Finistere:ScF6KrVBJ7jU@ep-rough-sun-97600315.eu-central-1.aws.neon.tech/neondb"
   )
 
 type Player @model @search {
