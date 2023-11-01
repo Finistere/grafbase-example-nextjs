@@ -12,7 +12,6 @@ type Note @model @search {
   note: String!
   player: Player!
 }
-
 # extend type Query {
 #   hello(name: String): String! @resolver(name: "hello")
 # }
