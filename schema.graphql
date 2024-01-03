@@ -3,7 +3,11 @@
 #     url: "postgresql://Finistere:k7VM1dYGNQFs@ep-round-shadow-11016698.us-east-2.aws.neon.tech/neondb"
 #   )
 
+
+extend schema @experimental(kv: true)
+
 extend type Query {
-  hello(name: String): String! @resolver(name: "hello")
+   hello: String! @resolver(name: "test")
 }
+
 
