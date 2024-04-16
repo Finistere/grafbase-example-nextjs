@@ -4,6 +4,7 @@
     "@grafbase/sdk": "^0.20.0"
   },
   "dependencies": {
-    "grafbase": "^0.67.3"
+    "grafbase": "^0.67.3",
+    "@grafbase/cli-x86_64-unknown-linux-musl": "^0.67.3"
   }
 }
