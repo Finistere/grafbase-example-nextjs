@@ -9,7 +9,7 @@ const g = graph.Standalone();
 // g.datasource(petstore);
 
 const pg = connector.Postgres("Postgres", {
-  url: "postgresql://neondb_owner:rP3zwFebJsH2@ep-floral-mode-a5i5fub7.us-east-2.aws.neon.tech/neondb?sslmode=require",
+  url: "postgresql://neondb_owner:879%2F%40%3A%3F%25testhelloworld@ep-floral-mode-a5i5fub7.us-east-2.aws.neon.tech/neondb?sslmode=require",
 });
 
 g.datasource(pg);
