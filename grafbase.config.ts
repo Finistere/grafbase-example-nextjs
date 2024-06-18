@@ -2,17 +2,11 @@ import { graph, connector, config } from "@grafbase/sdk";
 
 const g = graph.Standalone();
 
-// const petstore = connector.OpenAPI("PetStore", {
-//   schema: "https://petstore3.swagger.io/api/v3/openapi.json",
-//   url: "https://petstore3.swagger.io/api/v3",
-// });
-// g.datasource(petstore);
-
-const pg = connector.Postgres("Postgres", {
-  url: "postgresql://neondb_owner:879%2F%40%3A%3F%25testhelloworld@ep-floral-mode-a5i5fub7.us-east-2.aws.neon.tech/neondb?sslmode=require",
+const petstore = connector.OpenAPI("PetStore", {
+  schema: "https://petstore3.swagger.io/api/v3/openapi.json",
+  url: "https://petstore3.swagger.io/api/v3",
 });
-
-g.datasource(pg);
+g.datasource(petstore);
 
 export default config({
   graph: g,
